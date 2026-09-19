@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: engfawazmohammednasser-cmyk/Aden-Server-for-Technologies # مسار مستودعك بالضبط
+  repo: engfawazmohammednasser-cmyk/aden Server for Technologies # مسار مستودعك بالضبط
   branch: main # الفرع الرئيسي للموقع
 
 media_folder: "images" # المجلد الذي تُحفظ فيه صور المنتجات الجديدة

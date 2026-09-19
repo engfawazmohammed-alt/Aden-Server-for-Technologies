@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الأعمال - عدن تك</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- خط الرقعة -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Reem+Kufi:wght@600&display=swap" rel="stylesheet">
+    <style>
+        .ruqah-text {
+            font-family: 'Amiri', serif;
+        }
+        /* منع أي خروج أفقي للعناصر عند تصفح الجوال أو قلبه أفقياً */
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- الشريط العلوي (Header & Navigation) -->
+    <header class="bg-slate-900 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex flex-wrap justify-between items-center p-4">
+            <div class="flex items-center space-x-3 space-x-reverse mb-2 sm:mb-0">
+                <h1 class="text-2xl font-bold tracking-wider text-red-600 ruqah-text">عدن تك</h1>
+                <span class="text-xs bg-red-600 px-2 py-1 rounded text-white">Hikvision</span>
+            </div>
+
+            <nav class="hidden md:flex space-x-6 space-x-reverse text-sm font-medium">
+                <a href="index.html" class="hover:text-red-500">الصفحة الرئيسية</a>
+                <a href="products.html" class="hover:text-red-500">المنتجات</a>
+                <a href="services.html" class="hover:text-red-500">خدمات الدعم الفني</a>
+                <a href="portfolio.html" class="text-red-500 hover:text-red-400">معرض الأعمال</a>
+                <a href="about.html" class="hover:text-red-500">من نحن</a>
+            </nav>
+
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <a href="https://wa.me/967774436985?text=مرحباً، أريد الاستفسار عن خدمات عدن تك للكاميرات" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-full flex items-center text-xs">
+                    <i class="fab fa-whatsapp ml-1"></i> محادثة مباشرة
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- رأسية صفحة معرض الأعمال -->
+    <section class="bg-slate-900 text-white py-16 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-5xl font-bold ruqah-text text-red-600 mb-4">معرض الأعمال</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto text-sm md:text-base">تفقّد جانب من أعمالنا الاحترافية في تركيب كاميرات المراقبة وتمديد وتنظيم الشبكات.</p>
+        </div>
+    </section>
+
+    <!-- قسم معرض الصور -->
+    <section class="py-16 container mx-auto px-4">
+        
+        <!-- تنبيه للمستخدم لتكبير الصور -->
+        <div class="text-center mb-10">
+            <span class="inline-flex items-center text-xs md:text-sm text-red-600 bg-red-50 border border-red-100 px-4 py-2 rounded-full shadow-xs">
+                <i class="fas fa-search-plus ml-2"></i> ملاحظة: يمكنك الضغط على أي صورة أدناه لتكبيرها وعرضها بالكامل بوضوح تام.
+            </span>
+        </div>
+
+        <!-- شبكة الصناديق (Gallery Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- العنصر الأول -->
+            <div class="bg-white rounded-xl shadow-md p-5 border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-3 text-lg text-center">ترتيب وتمديد كابلات السيرفر</h4>
+                    <div class="h-48 bg-gray-900 rounded-lg overflow-hidden border border-gray-200 flex items-center justify-center cursor-pointer hover:opacity-90 transition relative group mb-4" onclick="openModal(this.querySelector('img').src)">
+                        <img src="images/portfolio-1.jpg" alt="صورة العمل" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs">
+                            <i class="fas fa-expand ml-1"></i> تكبير الصورة
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-xs text-center">إعادة هيكلة السيرفر وتنظيم كابلات الشبكة بالكامل بأعلى معايير الجودة.</p>
+            </div>
+
+            <!-- العنصر الثاني -->
+            <div class="bg-white rounded-xl shadow-md p-5 border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-3 text-lg text-center">تركيب كاميرات مراقبة خارجية</h4>
+                    <div class="h-48 bg-gray-900 rounded-lg overflow-hidden border border-gray-200 flex items-center justify-center cursor-pointer hover:opacity-90 transition relative group mb-4" onclick="openModal(this.querySelector('img').src)">
+                        <img src="images/portfolio-2.jpg" alt="صورة العمل" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs">
+                            <i class="fas fa-expand ml-1"></i> تكبير الصورة
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-xs text-center">تمديد وتركيب كاميرات هيكفيشن بوضوح عالي وزوايا رؤية شاملة للمواقع.</p>
+            </div>
+
+            <!-- العنصر الثالث -->
+            <div class="bg-white rounded-xl shadow-md p-5 border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-3 text-lg text-center">تمديد شبكة نقاط لاسلكية</h4>
+                    <div class="h-48 bg-gray-900 rounded-lg overflow-hidden border border-gray-200 flex items-center justify-center cursor-pointer hover:opacity-90 transition relative group mb-4" onclick="openModal(this.querySelector('img').src)">
+                        <img src="images/portfolio-3.jpg" alt="صورة العمل" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs">
+                            <i class="fas fa-expand ml-1"></i> تكبير الصورة
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-xs text-center">تجهيز التمديدات وتأمين نقاط الاتصال للشركات والمكاتب الإدارية.</p>
+            </div>
+
+            <!-- العنصر الرابع -->
+            <div class="bg-white rounded-xl shadow-md p-5 border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-3 text-lg text-center">ضبط نظام المراقبة والشاشات</h4>
+                    <div class="h-48 bg-gray-900 rounded-lg overflow-hidden border border-gray-200 flex items-center justify-center cursor-pointer hover:opacity-90 transition relative group mb-4" onclick="openModal(this.querySelector('img').src)">
+                        <img src="images/portfolio-4.jpg" alt="صورة العمل" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs">
+                            <i class="fas fa-expand ml-1"></i> تكبير الصورة
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-xs text-center">توصيل الكاميرات بجهاز التسجيل وضبط إعدادات العرض على الشاشات بدقة.</p>
+            </div>
+
+            <!-- العنصر الخامس -->
+            <div class="bg-white rounded-xl shadow-md p-5 border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-3 text-lg text-center">تأسيس شبكات كاميرات متقدمة</h4>
+                    <div class="h-48 bg-gray-900 rounded-lg overflow-hidden border border-gray-200 flex items-center justify-center cursor-pointer hover:opacity-90 transition relative group mb-4" onclick="openModal(this.querySelector('img').src)">
+                        <img src="images/portfolio-5.jpg" alt="صورة العمل" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs">
+                            <i class="fas fa-expand ml-1"></i> تكبير الصورة
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-xs text-center">تنفيذ مشاريع حماية متكاملة للمنشآت التجارية بأسلوب احترافي.</p>
+            </div>
+
+            <!-- العنصر السادس -->
+            <div class="bg-white rounded-xl shadow-md p-5 border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-3 text-lg text-center">صيانة وتنسيق غرف التحكم</h4>
+                    <div class="h-48 bg-gray-900 rounded-lg overflow-hidden border border-gray-200 flex items-center justify-center cursor-pointer hover:opacity-90 transition relative group mb-4" onclick="openModal(this.querySelector('img').src)">
+                        <img src="images/portfolio-6.jpg" alt="صورة العمل" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs">
+                            <i class="fas fa-expand ml-1"></i> تكبير الصورة
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-xs text-center">ترتيب وتنظيم غرف المراقبة المركزية لضمان سهولة الإدارة والصيانة.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- نافذة منبثقة (Modal) لعرض الصورة بالحجم الكامل -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden flex items-center justify-center p-4" onclick="closeModal()">
+        <div class="relative max-w-4xl max-h-full">
+            <button class="absolute -top-10 left-0 text-white text-3xl font-bold hover:text-red-500">&times;</button>
+            <img id="modalImg" src="" alt="الصورة بالحجم الكامل" class="max-w-full max-h-[85vh] object-contain rounded-lg">
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer class="bg-slate-900 text-gray-300 py-10 border-t border-slate-800">
+        <div class="container mx-auto px-4 text-center">
+            <h4 class="text-white font-bold mb-2 text-lg">عدن تك للحماية والأمن</h4>
+            <p class="text-sm text-gray-400 mb-4">نظامك الأمني بين أيدٍ أمينة.</p>
+            <div class="text-xs text-gray-500 border-t border-slate-800 pt-4">
+                جميع الحقوق محفوظة © 2026 عدن تك.
+            </div>
+        </div>
+    </footer>
+
+    <!-- سكريبت تكبير الصور -->
+    <script>
+        function openModal(imgSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            modalImg.src = imgSrc;
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

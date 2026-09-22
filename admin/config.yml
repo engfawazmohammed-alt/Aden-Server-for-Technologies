@@ -1,19 +1,24 @@
 backend:
-  name: github
-  repo: engfawazmohammednasser-cmyk/aden Server for Technologies # مسار مستودعك بالضبط
-  branch: main # الفرع الرئيسي للموقع
+  name: git-gateway
+  branch: main
 
-media_folder: "images" # المجلد الذي تُحفظ فيه صور المنتجات الجديدة
-public_folder: "images"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: "products"
-    label: "المنتجات والعروض"
-    folder: "data/products" # سيقوم النظام بإنشاء مجلد هنا لحفظ بيانات المنتجات
-    create: true # السماح للآدمن بإضافة منتجات جديدة
-    slug: "{{slug}}"
-    fields:
-      - { label: "اسم المنتج أو الباقة", name: "title", widget: "string" }
-      - { label: "السعر بالريال", name: "price", widget: "string" }
-      - { label: "صورة المنتج", name: "image", widget: "image" }
-      - { label: "وصف ومواصفات المنتج", name: "body", widget: "markdown" }
+  - name: "store"
+    label: "إدارة المتجر"
+    delete: false # لمنع حذف الملف بالكامل بالخطأ
+    files:
+      - file: "data/products.json" # هنا سيتم حفظ كل المنتجات في ملف واحد فقط!
+        label: "قائمة المنتجات"
+        name: "products"
+        fields:
+          - label: "المنتجات"
+            name: "items"
+            widget: "list" # يسمح لك بإضافة قائمة غير منتهية من المنتجات
+            fields:
+              - { label: "اسم المنتج", name: "title", widget: "string" }
+              - { label: "السعر", name: "price", widget: "number" }
+              - { label: "صورة المنتج", name: "image", widget: "image" }
+              - { label: "وصف المنتج", name: "body", widget: "markdown" }
